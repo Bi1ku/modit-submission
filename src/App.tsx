@@ -5,6 +5,7 @@ import TypewriterComponent from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import Modal from './components/Modal';
 import { faker } from '@faker-js/faker';
+import Footer from './components/Footer';
 
 const songs = [
   {
@@ -167,6 +168,7 @@ function App() {
           ></iframe>
         }
       />
+      <Footer />
     </div>
   );
 }

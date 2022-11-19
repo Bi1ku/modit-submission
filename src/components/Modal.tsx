@@ -15,7 +15,7 @@ const Modal = ({ show, description, title, rating, setShow, video }: Props) => {
     <AnimatePresence>
       {show && (
         <motion.div
-          className='modal-background-color fixed h-screen top-0 right-0 left-0 grid place-items-center p-10'
+          className='modal-background-color fixed h-screen top-0 right-0 left-0 grid place-items-center p-10 z-10'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.2 } }}
           id='#overlay'
