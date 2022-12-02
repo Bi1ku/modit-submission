@@ -348,3 +348,19 @@
 .modal-background-color {
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+.fast-embed-div {
+  height: 0px;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.fast-embed-iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}

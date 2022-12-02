@@ -1,11 +1,11 @@
-import './App.css';
 import { useState } from 'react';
-import MeteorShower from './components/MeteorShower';
+import MeteorShower from '../components/MeteorShower';
 import TypewriterComponent from 'typewriter-effect';
 import { motion } from 'framer-motion';
-import Modal from './components/Modal';
+import Modal from '../components/Modal';
 import { faker } from '@faker-js/faker';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
+import '../App.css';
 
 const songs = [
   {
@@ -137,15 +137,16 @@ function App() {
                 Rating: {v.rating}
               </span>
             </div>
-            <iframe
-              width='auto'
-              height='120'
-              src='https://www.youtube.com/embed/ZEcqHA7dbwM'
-              title='YouTube video player'
-              frameBorder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullScreen
-            ></iframe>
+            <div className='fast-embed-div'>
+              <iframe
+                className='fast-embed-iframe'
+                src='https://tube.rvere.com/embed?v=ZEcqHA7dbwM'
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+              ></iframe>
+            </div>
           </motion.div>
         ))}
       </div>
