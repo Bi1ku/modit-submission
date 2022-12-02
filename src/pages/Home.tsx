@@ -84,7 +84,6 @@ function App() {
               transition: { duration: 0.7, delay: 0.3 },
             }}
           ></motion.div>
-          {/* <p className='text-xl text-yellow-400'>Hello world</p> */}
           <motion.div
             className='text-yellow-300 flex text-3xl justify-center mt-4'
             initial={{ x: -300, opacity: 0 }}
@@ -106,7 +105,7 @@ function App() {
         </div>
       </div>
       <MeteorShower />
-      <div className='p-10 grid lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-3 md:grid-rows-6 sm:grid-rows-[12] gap-4'>
+      <div className='p-10 grid lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-3 md:grid-rows-6 grid-cols-1 grid-rows-[9] gap-4'>
         {songs.map((v, i) => (
           <motion.div
             className='text-white bg-gray-800 p-7 rounded-2xl flex flex-col hover:cursor-pointer'
@@ -117,6 +116,7 @@ function App() {
               opacity: 1,
               transition: { duration: 0.5, delay: i * 0.2 },
             }}
+            viewport={{ once: true }}
             onClick={() => {
               setShowModal(true);
               setSong(v);

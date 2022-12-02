@@ -16,6 +16,7 @@ function Footer(props: Props) {
           opacity: 1,
           transition: { duration: 0.5, delay: 0.6 },
         }}
+        viewport={{ once: true }}
         className='text-white text-xl'
       >
         Contact Me
@@ -28,6 +29,7 @@ function Footer(props: Props) {
           x: 0,
           transition: { duration: 0.5, delay: 0.7 },
         }}
+        viewport={{ once: true }}
       >
         <img src={Discord} alt='Github' className='w-10 h-10' />
         <img src={GitHub} alt='Github' className='w-10 h-10' />
@@ -41,6 +43,7 @@ function Footer(props: Props) {
           opacity: 1,
           transition: { duration: 0.5, delay: 0.9 },
         }}
+        viewport={{ once: true }}
         href='https://github.com/Bi1ku/modit-submission'
       >
         Source Code {'</>'}
