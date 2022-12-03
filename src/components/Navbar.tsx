@@ -1,14 +1,22 @@
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 
 type Props = {};
 
 const Navbar = (props: Props) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(
+    localStorage.getItem('show') === 'true' || false,
+  );
+
+  // Persist navbar show state in localstorage for displays on other pages/refreshes
+  useEffect(() => {
+    localStorage.setItem('show', show.toString());
+  }, [show]);
+
   return (
-    <div className='fixed z-20 text-white ml-10 pt-6 py-5 flex font-mono'>
+    <div className='fixed z-20 text-white mt-6 flex font-mono'>
       <motion.button
         onClick={() => setShow(!show)}
         className={`mr-8 ${

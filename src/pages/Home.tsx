@@ -55,7 +55,7 @@ const songs = [
   },
 ];
 
-function App() {
+function Home() {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [song, setSong] = useState<{
     title: string;
@@ -64,57 +64,55 @@ function App() {
   }>();
 
   return (
-    <div className='font-mono bg-gray-900'>
-      <div className='h-screen relative'>
-        <div className='star' />
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          <motion.h1
-            className='text-7xl text-white mb-4'
-            initial={{ x: -300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1, transition: { duration: 0.7 } }}
-          >
-            Frank Sinatra
-          </motion.h1>
-          <motion.div
-            className='border border-white'
-            initial={{ x: 300, opacity: 0 }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              transition: { duration: 0.7, delay: 0.3 },
+    <>
+      <div className='flex items-center justify-center h-screen flex-col'>
+        <motion.h1
+          className='text-7xl text-white mb-4'
+          initial={{ x: -300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { duration: 0.7 } }}
+        >
+          Frank Sinatra
+        </motion.h1>
+        <motion.div
+          className='border border-white'
+          initial={{ x: 300, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.7, delay: 0.3 },
+          }}
+        ></motion.div>
+        <motion.div
+          className='text-yellow-300 flex text-3xl justify-center mt-4'
+          initial={{ x: -300, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.7, delay: 0.6 },
+          }}
+        >
+          <span className='text-white mr-2'>Renowned</span>
+          <TypewriterComponent
+            options={{
+              strings: ['Singer', 'Actor', 'Musician'],
+              autoStart: true,
+              loop: true,
             }}
-          ></motion.div>
-          <motion.div
-            className='text-yellow-300 flex text-3xl justify-center mt-4'
-            initial={{ x: -300, opacity: 0 }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              transition: { duration: 0.7, delay: 0.6 },
-            }}
-          >
-            <span className='text-white mr-2'>Renowned</span>
-            <TypewriterComponent
-              options={{
-                strings: ['Singer', 'Actor', 'Musician'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </motion.div>
-        </div>
+          />
+        </motion.div>
       </div>
       <MeteorShower />
       <div className='p-10 grid lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-3 md:grid-rows-6 grid-cols-1 grid-rows-[9] gap-4'>
         {songs.map((v, i) => (
           <motion.div
+            key={i}
             className='text-white bg-gray-800 p-7 rounded-2xl flex flex-col hover:cursor-pointer'
             id='#modal-button'
             initial={{ x: -300, opacity: 0 }}
             whileInView={{
               x: 0,
               opacity: 1,
-              transition: { duration: 0.5, delay: i * 0.2 },
+              transition: { duration: 0.5, delay: i * 0.1 },
             }}
             viewport={{ once: true }}
             onClick={() => {
@@ -169,9 +167,8 @@ function App() {
           ></iframe>
         }
       />
-      <Footer />
-    </div>
+    </>
   );
 }
 
-export default App;
+export default Home;
