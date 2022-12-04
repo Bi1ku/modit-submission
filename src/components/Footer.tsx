@@ -31,10 +31,38 @@ function Footer(props: Props) {
         }}
         viewport={{ once: true }}
       >
-        <img src={Discord} alt='Github' className='w-10 h-10' />
-        <img src={GitHub} alt='Github' className='w-10 h-10' />
-        <img src={Instagram} alt='Github' className='w-10 h-10' />
-        <img src={Reddit} alt='Github' className='w-10 h-10' />
+        <img
+          src={Discord}
+          alt='Discord'
+          className='w-10 h-10'
+          onClick={() =>
+            (window.location.href =
+              'https://discordapp.com/users/896543300012609546/')
+          }
+        />
+        <img
+          src={GitHub}
+          alt='Github'
+          className='w-10 h-10'
+          onClick={() => (window.location.href = 'https://github.com/Bi1ku')}
+        />
+        <img
+          src={Instagram}
+          alt='Instagram'
+          className='w-10 h-10'
+          onClick={() =>
+            (window.location.href = 'https://www.instagram.com/bi_i_ku/')
+          }
+        />
+        <img
+          src={Reddit}
+          alt='Reddit'
+          className='w-10 h-10'
+          onClick={() =>
+            (window.location.href =
+              'https://www.reddit.com/user/silver-tomatoes')
+          }
+        />
       </motion.div>
       <motion.a
         className='text-xl text-blue-600 cursor-pointer duration-300 hover:underline'
