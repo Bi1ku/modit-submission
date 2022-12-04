@@ -1,18 +1,44 @@
+import { motion } from 'framer-motion';
 type Props = {};
 
 const Biography = (props: Props) => {
   return (
     <>
       <div className='text-white flex items-center flex-col justify-center mt-36'>
-        <h1 className='text-3xl mb-6 text-center'>Frank Sinatra's Biography</h1>
-        <div className='p-5'>
+        <motion.h1
+          initial={{ opacity: 0, y: -300 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.2 },
+          }}
+          className='text-3xl mb-6 text-center'
+        >
+          Frank Sinatra's Biography
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 1, delay: 0.3 },
+          }}
+          className='p-5'
+        >
           <img
             className='lg:max-w-4xl md:max-w-xl'
             src='https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2015_50/889371/frank-sinatra-today-tease-1-151207.jpg'
             alt=''
           />
-        </div>
-        <div className='bg-gray-900 mt-4 sm:p-10'>
+        </motion.div>
+        <motion.div
+          className='bg-gray-900 mt-4 sm:p-10'
+          initial={{ opacity: 0, x: 500 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, delay: 0.2 },
+          }}
+        >
           <span>
             &nbsp; &nbsp; &nbsp; American singer and actor, Frank Sinatra, was
             born on December 12th, 1915 in Hoboken, New Jersey. During his early
@@ -33,7 +59,7 @@ const Biography = (props: Props) => {
             his legacy is not forgotten and is still one of the largest artists
             in modern society even after his death.
           </span>
-        </div>
+        </motion.div>
       </div>
     </>
   );

@@ -1,8 +1,8 @@
 import React from 'react';
-import Discord from '../assets/discord.png';
-import GitHub from '../assets/github.png';
-import Instagram from '../assets/instagram.png';
-import Reddit from '../assets/reddit.png';
+import Discord from '../assets/icons/discord.png';
+import GitHub from '../assets/icons/github.png';
+import Instagram from '../assets/icons/instagram.png';
+import Reddit from '../assets/icons/reddit.png';
 import { motion } from 'framer-motion';
 
 type Props = {};

@@ -5,18 +5,19 @@ import { motion } from 'framer-motion';
 type Props = {};
 
 const photos = [
-  'https://d3nxoulyw7bc8u.cloudfront.net/images/artists/None/603aa8ce-63e2-440b-8c96-11f8fc505845.jpg',
-  'https://www.history.com/.image/t_share/MTU3ODc4NjAyNDQwNTE2OTM3/gettyimages-74295793.jpg',
-  'https://i.scdn.co/image/883de3e492364891543bc0313ffe516626778a16',
-  'https://media.gq-magazine.co.uk/photos/5dee60bf271d0f00080ca916/master/pass/20191209-sinatra-04.jpg',
-  'https://www.liveabout.com/thmb/kd-RYt0w0SDKjozOs6l8cIDwe0s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/frank-sinatra-recording-session-51246296-5c899ec94cedfd000190b29a.jpg',
-  'https://hollywoodlife.com/wp-content/uploads/2021/11/Frank-sinatra-grandchildren-shutter-ftr.jpg',
+  require('../assets/artist/frank-sinatra-1.jpeg'),
+  require('../assets/artist/frank-sinatra-2.jpeg'),
+  require('../assets/artist/frank-sinatra-3.jpeg'),
+  require('../assets/artist/frank-sinatra-4.webp'),
+  require('../assets/artist/frank-sinatra-5.jpeg'),
+  require('../assets/artist/frank-sinatra-6.webp'),
 ];
 
 const Photos = (props: Props) => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   return (
     <>
+      <img src='.../assets/artist/frank-sinatra-1.jpeg' alt='' />
       <div className='items-center justify-between h-screen text-white text-2xl sm:flex hidden'>
         <motion.button
           className='ml-10'
@@ -55,8 +56,8 @@ const Photos = (props: Props) => {
           Frank Sinatra Photos
         </h1>
         <motion.div className='sm:hidden grid grid-cols-1 gap-6'>
-          {photos.map((src) => (
-            <img src={src} alt='Frank Sinatra'></img>
+          {photos.map((src, i) => (
+            <img key={i} src={src} alt='Frank Sinatra'></img>
           ))}
         </motion.div>
       </div>
