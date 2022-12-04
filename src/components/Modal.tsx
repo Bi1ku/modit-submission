@@ -72,7 +72,7 @@ const Modal = ({ show, description, title, rating, setShow, video }: Props) => {
             >
               {description}
             </motion.span>
-            {video}
+            <div className='mt-4'>{video}</div>
           </motion.div>
         </motion.div>
       )}

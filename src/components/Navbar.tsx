@@ -33,16 +33,16 @@ const Navbar = (props: Props) => {
             initial={{ x: -500 }}
             animate={{ x: 0, transition: { duration: 1 } }}
             exit={{ x: -500, transition: { duration: 1 } }}
-            className='z-20 flex items-center font-bold font-mono'
+            className='z-20 flex items-center font-bold font-mono sm:text-base text-sm'
           >
-            <a href='/' className='mr-8'>
+            <a href='/' className='sm:mr-8 mr-4'>
               Home
             </a>
-            <div className='rounded-full bg-white w-1 h-1 mr-6' />
-            <a href='/bio' className='mr-8'>
+            <div className='rounded-full bg-white w-1 h-1 sm:mr-8 mr-4' />
+            <a href='/bio' className='sm:mr-8 mr-4'>
               Biography
             </a>
-            <div className='rounded-full bg-white w-1 h-1 mr-6' />
+            <div className='rounded-full bg-white w-1 h-1 sm:mr-8 mr-4' />
             <a href='/photos'>Photos</a>
           </motion.div>
         )}
