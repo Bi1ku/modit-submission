@@ -32,7 +32,7 @@ const Biography = (props: Props) => {
         </motion.div>
         <motion.div
           className='bg-gray-900 mt-4 sm:p-10'
-          initial={{ opacity: 0, x: 500 }}
+          initial={{ opacity: 0, x: -500 }}
           animate={{
             opacity: 1,
             x: 0,
